@@ -26,6 +26,7 @@ First Importer implemented is for the IBM Watson Conversation service.  Watson u
 Usage example:
     Watson import ../../SampleIntents/Watson/WatsonConversationCarWorkspace.json dataset.json
 
+
 Generated dataset.json example:
     {
         "intents" : [
@@ -38,6 +39,7 @@ Generated dataset.json example:
             }
         ]
     }
+    
 
 
 # SampleIntents
@@ -48,6 +50,9 @@ WatsonConversationCarWorkspace.json in the Watson subfolder is an export of the 
 # Embedder
 
 This subproject contains Swift code to be executed on a macOS or iOS environments to import a JSON file containing the Dataset to be used for training the NLC model.  This importer use Apple Foundation NSLinguisticTagger APIs to analyze and tokenize the text in the sample utterances creating a word embedder. In particular it output a One-Hot Encoding for Stem words and a Corpus of documents and a Class of entities to be used for both training the data and prepare the model as well as for inferencing the model.
+
+Usage example:
+    Embedder import ../Importer/Watson/dataset.json
 
 
 

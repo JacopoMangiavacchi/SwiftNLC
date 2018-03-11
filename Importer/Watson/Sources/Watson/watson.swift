@@ -6,7 +6,7 @@ import Foundation
 
 struct WatsonConversationWorkspace: Codable {
     let name: String
-    let intents: [Intent]
+    let intents: [WatsonIntent]
     let entities: [Entity]
     let language: String
     let metadata: WatsonConversationWorkspaceMetadata
@@ -188,7 +188,7 @@ enum ValueType: String, Codable {
     case synonyms = "synonyms"
 }
 
-struct Intent: Codable {
+struct WatsonIntent: Codable {
     let intent: String
     let examples: [Example]
     let description: JSONNull?
@@ -465,9 +465,9 @@ extension Value {
     }
 }
 
-extension Intent {
+extension WatsonIntent {
     init(data: Data) throws {
-        self = try JSONDecoder().decode(Intent.self, from: data)
+        self = try JSONDecoder().decode(WatsonIntent.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {

@@ -23,6 +23,9 @@ The idea is to provide different importer for different file format being able t
 
 First Importer implemented is for the IBM Watson Conversation service.  Watson use a JSON "workspace" file containing Intents, with several sample utterances, and also Entities (Slots), also with sample utterances, as well as a Tree for complex Dialog management of long running conversation.  This project is just about NLC and it only import Intents and sample utterances from this file.
 
+Usage example:
+    Watson import ../../SampleIntents/Watson/WatsonConversationCarWorkspace.json dataset.json
+
 
 # SampleIntents
 

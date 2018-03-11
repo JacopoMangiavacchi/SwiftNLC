@@ -26,6 +26,19 @@ First Importer implemented is for the IBM Watson Conversation service.  Watson u
 Usage example:
     Watson import ../../SampleIntents/Watson/WatsonConversationCarWorkspace.json dataset.json
 
+Generated dataset.json example:
+    {
+        "intents" : [
+            {
+                "intent" : "hello",
+                "utterances" : [
+                    "hello",
+                    "good morning"
+                ]
+            }
+        ]
+    }
+
 
 # SampleIntents
 

@@ -7,7 +7,7 @@ class ImportCommand: Command {
     let inputPath = Parameter()
     
     func execute() throws {
-        print("Importing \(inputPath.value) to encoding.bin, corpus.bin and entity.bin")
+        print("Importing \(inputPath.value) to bagOfWords.json and lemmatizedDataset.json")
 
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: inputPath.value))
@@ -37,16 +37,20 @@ class ImportCommand: Command {
                 tempLemmatizedIntentsDictionary[intent.intent] = tempIntentLemmaUtterancesArray
             }
 
-            print(setOfWords)
+            let bagOfWords = BagOfWords(setOfWords: setOfWords)
 
-            //TODO: Create arrayOfWords from setOfWords
+            let lemmatizedDataset = TrainingDataset(embeddingSize: bagOfWords.sortedArrayOfWords.count, 
+                                                    intents: tempLemmatizedIntentsDictionary.map { key, value in 
+                                                       TrainingIntent(intent: key, embeddedUtterances: value.map {
+                                                           bagOfWords.embed(arrayOfWords: $0)
+                                                       }) 
+                                                    })
 
-            var lemmatizedDataset = TrainingDataset(embeddingSize: setOfWords.count, intents: [TrainingIntent]())
+            let bagOfWordsData = try JSONEncoder().encode(bagOfWords)
+            try bagOfWordsData.write(to: URL(fileURLWithPath: "bagOfWords.json"))
 
-
-            //TODO: Export arrayOfWords
-            //TODO: Export lemmatizedDataset
-
+            let lemmatizedDatasetData = try JSONEncoder().encode(lemmatizedDataset)
+            try lemmatizedDatasetData.write(to: URL(fileURLWithPath: "lemmatizedDataset.json"))
 
             print("done!")
         }

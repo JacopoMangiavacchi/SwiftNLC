@@ -2,14 +2,13 @@
 
 Python Jupyter Notebook using Keras API and TensorFlow as backend to create a simple fully connected Deep Network Classifier and CoreMLTools to export the TensorFlow model to CoreML
 
-
 Step by step instruction to create the ML model using Keras/TensorFlow and export it on CoreML using CoreMLConversionTool 
 
-# Download and Install Anaconda Python
+## Download and Install Anaconda Python:
     https://www.continuum.io/downloads
 
 
-# Create the Keras, TensorFlow, Python, CoreML environment
+## Create the Keras, TensorFlow, Python, CoreML environment:
     conda env create
 
 This environment is created based on the environment.yml file for iinstalling Python 2.7, TensorFlow 1.1, Keras 2.0.4, CoreMLTools 0.6.3, Pandas and other Python usefull packages:
@@ -38,26 +37,23 @@ This environment is created based on the environment.yml file for iinstalling Py
         - nltk==3.2.5
 
 
+NB NLTK is only needed for the createModelWithNLTKEmbedding initial test Notebook
 
-Wait for the environment to create.
 
-# Activate the environment (Mac/Linux)
+## Activate the environment (Mac/Linux):
     source activate SwiftNLC
 
-# Check that your prompt changed to
+## Check that your prompt changed to:
     (SwiftNLC) $
 
-# Launch Jupyter Notebook
+## Launch Jupyter Notebook:
     jupyter notebook
 
-# Open your browser to
+## Open your browser to:
     http://localhost:8888
 
 
-# Create a basic Model with Keras/TensorFlow and export it with CoreMLTools
-Open createModel.ipynb in your Jupyter browsing session
-
-Execute any cells in order to create, save and export the Keras Model using CoreML Exporting Tools
+To create a basic Model with Keras/TensorFlow and export it with CoreMLTools just open createModelWithNLTKEmbedding.ipynb in your Jupyter browsing session and execute any cells in order to create, save and export the Keras Model using CoreML Exporting Tools
 
 
 The Basic CoreML Model will be saved in the current folder 

@@ -26,6 +26,6 @@ class Lemmatizer {
     }
 
     func lemmatize(text: String) -> [TaggedToken] {
-        return tag(text: text, scheme: NSLinguisticTagScheme.lemma.rawValue)
+        return tag(text: text.lowercased(), scheme: NSLinguisticTagScheme.lemma.rawValue)
     }
 }

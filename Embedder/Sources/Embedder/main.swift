@@ -7,17 +7,20 @@ class ImportCommand: Command {
     let inputPath = Parameter()
     
     func execute() throws {
-        print("Importing \(inputPath.value) to bagOfWords.json and lemmatizedDataset.json")
+        print("Importing \(inputPath.value) to bagOfWords.json, lemmatizedDataset.json and intents.json")
 
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: inputPath.value))
             let dataset =  try JSONDecoder().decode(Dataset.self, from: data)
 
+            var intentsArray = [String]()
             var setOfWords = Set<String>()            
             var tempLemmatizedIntentsDictionary = [String : [[String]]]() // Intents : [[Lemma]]
             let l = Lemmatizer()
 
             for intent in dataset.intents {
+                intentsArray.append(intent.intent)
+
                 var tempIntentLemmaUtterancesArray = [[String]]()
 
                 for utterance in intent.utterances {
@@ -51,6 +54,9 @@ class ImportCommand: Command {
 
             let lemmatizedDatasetData = try JSONEncoder().encode(lemmatizedDataset)
             try lemmatizedDatasetData.write(to: URL(fileURLWithPath: "lemmatizedDataset.json"))
+
+            let intentsData = try JSONEncoder().encode(intentsArray)
+            try intentsData.write(to: URL(fileURLWithPath: "intents.json"))
 
             print("done!")
         }

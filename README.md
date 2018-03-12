@@ -7,12 +7,12 @@ A Natural Language Classifier (NLC) capable to run offline on iOS/watchOS/tvOS d
 # Folders / Projects
 
 - Importer: Swift macOS console app to import Intents and Utterances from different formats
-- SampleIntents: json files containing Intents definitions and sample Utterances
+- SampleDatasets: json files containing Intents definitions and sample Utterances
 - Embedder: Swift macOS console app to prepare word embedding using NSLinguisticTagger
 - ModelNotebook: Jupyter Notebook for Keras/TensorFlow Classifier and CoreML export
 - Storyboard: XCode Storyboard iOS project to play with model
 - Wrapper: Swift iOS Library to simplify access to CoreML Classifier model
-- Client: Test iOS application to play with Wrapper and CoreML model
+- SwiftNLCTestClient: Test iOS application to play with Wrapper and CoreML model
 
 
 # Importer
@@ -42,9 +42,11 @@ Generated dataset.json example:
     
 
 
-# SampleIntents
+# SampleDatasets
 
-WatsonConversationCarWorkspace.json in the Watson subfolder is an export of the standard sample Workspace for demoing IBM Watson Conversation service on IBM Cloud.
+This folder contains sample datasets with Intents and sample Utterances from different sources:
+- Watson/WatsonConversationCarWorkspace.json in the Watson subfolder is an export of the standard sample Workspace for demoing IBM Watson Conversation service on IBM Cloud.
+- PharmacyDataset.json (no need to import)
 
 
 # Embedder
@@ -52,8 +54,9 @@ WatsonConversationCarWorkspace.json in the Watson subfolder is an export of the 
 This subproject contains Swift code to be executed on a macOS or iOS environments to import a JSON file containing the Dataset to be used for training the NLC model.  This importer use Apple Foundation NSLinguisticTagger APIs to analyze and tokenize the text in the sample utterances creating a word embedder. In particular it output a One-Hot Encoding for Stem words and a Corpus of documents and a Class of entities to be used for both training the data and prepare the model as well as for inferencing the model.
 
 Usage example:
-    Embedder import ../Importer/Watson/dataset.json
+    Embedder import ../SampleDatasets/PharmacyDataset.json 
 
+This command produce the following files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json
 
 
 # ModelNotebook
@@ -62,11 +65,11 @@ Python Jupyter Notebook using Keras API and TensorFlow as backend to create a si
 
 Step by step instruction to create the ML model using Keras/TensorFlow and export it on CoreML using CoreMLConversionTool 
 
-Download and Install Anaconda Python:
+## Download and Install Anaconda Python:
     https://www.continuum.io/downloads
 
 
-Create the Keras, TensorFlow, Python, CoreML environment:
+## Create the Keras, TensorFlow, Python, CoreML environment:
     conda env create
 
 This environment is created based on the environment.yml file for iinstalling Python 2.7, TensorFlow 1.1, Keras 2.0.4, CoreMLTools 0.6.3, Pandas and other Python usefull packages:
@@ -95,23 +98,23 @@ This environment is created based on the environment.yml file for iinstalling Py
         - nltk==3.2.5
 
 
+NB NLTK is only needed for the createModelWithNLTKEmbedding initial test Notebook
 
-Wait for the environment to create.
 
-Activate the environment (Mac/Linux):
+## Activate the environment (Mac/Linux):
     source activate SwiftNLC
 
-Check that your prompt changed to:
+## Check that your prompt changed to:
     (SwiftNLC) $
 
-Launch Jupyter Notebook:
+## Launch Jupyter Notebook:
     jupyter notebook
 
-Open your browser to:
+## Open your browser to:
     http://localhost:8888
 
 
-To create a basic Model with Keras/TensorFlow and export it with CoreMLTools just open createModel.ipynb in your Jupyter browsing session and execute any cells in order to create, save and export the Keras Model using CoreML Exporting Tools
+To create a basic Model with Keras/TensorFlow and export it with CoreMLTools just open createModelWithNLTKEmbedding.ipynb in your Jupyter browsing session and execute any cells in order to create, save and export the Keras Model using CoreML Exporting Tools
 
 
 The Basic CoreML Model will be saved in the current folder 
@@ -126,5 +129,7 @@ The Basic CoreML Model will be saved in the current folder
 # Wrapper
 
 
-# Client
+# SwiftNLCTestClient
+
+
 

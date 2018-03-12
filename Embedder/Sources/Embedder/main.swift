@@ -13,24 +13,39 @@ class ImportCommand: Command {
             let data = try Data(contentsOf: URL(fileURLWithPath: inputPath.value))
             let dataset =  try JSONDecoder().decode(Dataset.self, from: data)
 
+            var setOfWords = Set<String>()            
+            var tempLemmatizedIntentsDictionary = [String : [[String]]]() // Intents : [[Lemma]]
+            let l = Lemmatizer()
 
+            for intent in dataset.intents {
+                var tempIntentLemmaUtterancesArray = [[String]]()
 
-            let options = NSLinguisticTagger.Options.omitWhitespace.rawValue | NSLinguisticTagger.Options.joinNames.rawValue
-            let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemes(forLanguage: "en"), options: Int(options))
+                for utterance in intent.utterances {
+                    var tempLemmaUtteranceArray = [String]()
 
-            let inputString = "This is a very long test for you to try"
-            tagger.string = inputString
+                    for lemmaTuple in l.lemmatize(text: utterance) {
+                        if let lemma = lemmaTuple.1 {
+                            let lowerLemma = lemma.lowercased()
+                            setOfWords.insert(lowerLemma)
+                            tempLemmaUtteranceArray.append(lowerLemma)
+                        }
+                    }
 
-            let range = NSRange(location: 0, length: inputString.utf16.count)
-            tagger.enumerateTags(in: range, scheme: .nameTypeOrLexicalClass, options: NSLinguisticTagger.Options(rawValue: options)) { tag, tokenRange, sentenceRange, stop in
-                guard let range = Range(tokenRange, in: inputString) else { return }
-                let token = inputString[range]
-                print("\(tag): \(token)")
+                    tempIntentLemmaUtterancesArray.append(tempLemmaUtteranceArray)
+                }
+
+                tempLemmatizedIntentsDictionary[intent.intent] = tempIntentLemmaUtterancesArray
             }
 
+            print(setOfWords)
+
+            //TODO: Create arrayOfWords from setOfWords
+
+            var lemmatizedDataset = TrainingDataset(embeddingSize: setOfWords.count, intents: [TrainingIntent]())
 
 
-
+            //TODO: Export arrayOfWords
+            //TODO: Export lemmatizedDataset
 
 
             print("done!")

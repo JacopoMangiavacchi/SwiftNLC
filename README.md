@@ -10,8 +10,7 @@ A Natural Language Classifier (NLC) capable to run offline on iOS/watchOS/tvOS d
 - SampleDatasets: json files containing Intents definitions and sample Utterances
 - WordEmbedding: Swift console app to prepare word embedding vectors for training
 - ModelNotebook: Jupyter Notebook for Keras/TensorFlow Classifier and CoreML export
-- Storyboard: XCode Storyboard iOS project to play with model
-- Wrapper: Swift iOS Library to simplify access to CoreML Classifier model
+- Wrapper: Swift iOS code to simplify access to CoreML Classifier model
 - SwiftNLCTestClient: Test iOS application to play with Wrapper and CoreML model
 
 
@@ -75,7 +74,8 @@ In order to learn word vectors a fast text model must be trained using the follo
 
 I used the Wikipedia pre-trained word vectors that can be downloaded below:
     
-    wiki-news-300d-1M.vec.zip: 1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens) - https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki-news-300d-1M.vec.zip
+    https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki-news-300d-1M.vec.zip : 1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)
+
 
 If you are new to fastText please refer to the tutoria at https://fasttext.cc for how to install and use fastText command line to generate a model.
 
@@ -85,10 +85,14 @@ For simplicity you can find the generated fastText model I'm using in my test in
 The fastText-Skipgram project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the Dataset to be used for training the NLC model. It output a ...
 
 Build with C++11 extension support:
+
     swift build -Xcxx -std=c++11
 
+
 Usage example:
+    
     fastText-Skipgram import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
+
 
 This command produce the following files on the current folder: ...
 
@@ -154,10 +158,6 @@ To create a basic Model with Keras/TensorFlow and export it with CoreMLTools jus
 The Basic CoreML Model will be saved in the current folder 
 
 
-
-
-
-# Storyboard
 
 
 # Wrapper

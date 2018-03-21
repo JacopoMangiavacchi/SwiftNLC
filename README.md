@@ -8,7 +8,7 @@ A Natural Language Classifier (NLC) capable to run offline on iOS/watchOS/tvOS d
 
 - Importer: Swift macOS console app to import Intents and Utterances from different formats
 - SampleDatasets: json files containing Intents definitions and sample Utterances
-- Embedder: Swift macOS console app to prepare word embedding using NSLinguisticTagger
+- WordEmbedding: Swift console app to prepare word embedding vectors for training
 - ModelNotebook: Jupyter Notebook for Keras/TensorFlow Classifier and CoreML export
 - Storyboard: XCode Storyboard iOS project to play with model
 - Wrapper: Swift iOS Library to simplify access to CoreML Classifier model
@@ -49,14 +49,48 @@ This folder contains sample datasets with Intents and sample Utterances from dif
 - PharmacyDataset.json (no need to import)
 
 
-# Embedder
+# WordEmbedding
 
-This subproject contains Swift code to be executed on a macOS or iOS environments to import a JSON file containing the Dataset to be used for training the NLC model.  This importer use Apple Foundation NSLinguisticTagger APIs to analyze and tokenize the text in the sample utterances creating a word embedder. In particular it output a One-Hot Encoding for Stem words and a Corpus of documents and a Class of entities to be used for both training the data and prepare the model as well as for inferencing the model.
+This folder contains Swift subprojects to import a JSON file containing the Dataset to be used for training the NLC model and produce a word vector based new corpus to be used for training the Deep Neural Network classifier.
+
+## oneHot-NSLinguisticTagger
+
+This oneHot-NSLinguisticTagger WordEmbedding project use Apple Foundation NSLinguisticTagger APIs to analyze and tokenize the text in the sample utterances creating a flat word embeddeing vector. In particular it output a One-Hot Encoding for Stem words and a Corpus of documents and a Class of entities to be used for both training the data and prepare the model as well as for inferencing the model.
+
+This project contains Swift code to be executed on a macOS or iOS environment (NSLinguisticTagger APIs are not based on Linux/cross platorm version of Apple Foundation) to import a JSON file containing the Dataset to be used for training the NLC model. 
 
 Usage example:
-    Embedder import ../SampleDatasets/PharmacyDataset.json 
+    oneHot-NSLinguisticTagger import ../../SampleDatasets/PharmacyDataset.json 
 
 This command produce the following files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json
+
+
+## fastText-Skipgram
+
+This fastText-Skipgram WordEmbedding project use Facebook open source fastText Library to analyze and tokenize the text using Word2Vec Skipgram word embedding vectors. In particular it use a Swift wrapper to the fastText C++ Library  (https://github.com/JacopoMangiavacchi/SwiftFastText) to generate sentence vectors for each utterances from the input dataset.
+
+In order to learn word vectors a fast text model must be trained using the following fasttext command line:
+
+    $ fasttext skipgram -input data.txt -output model
+
+I used the Wikipedia pre-trained word vectors that can be downloaded below:
+    
+    wiki-news-300d-1M.vec.zip: 1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens) - https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki-news-300d-1M.vec.zip
+
+If you are new to fastText please refer to the tutoria at https://fasttext.cc for how to install and use fastText command line to generate a model.
+
+For simplicity you can find the generated fastText model I'm using in my test in the fastText-Models main subfolder (../../fastText-Models/wikimodel.bin)
+
+
+The fastText-Skipgram project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the Dataset to be used for training the NLC model. It output a ...
+
+Build with C++11 extension support:
+    swift build -Xcxx -std=c++11
+
+Usage example:
+    fastText-Skipgram import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
+
+This command produce the following files on the current folder: ...
 
 
 # ModelNotebook

@@ -64,7 +64,7 @@ class ImportCommand: Command {
     }
 }
 
-let importer = CLI(name: "Embedder", version: "1.0.0", description: "SwiftNLC - Dataset JSON importer")
+let importer = CLI(name: "oneHot-NSLinguisticTagger", version: "1.0.0", description: "SwiftNLC - Dataset JSON importer")
 importer.commands = [ImportCommand()]
 let _ = importer.go()
 

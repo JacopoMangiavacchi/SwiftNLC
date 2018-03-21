@@ -39,9 +39,9 @@ class ImportCommand: Command {
 
             let bagOfWords = BagOfWords(setOfWords: setOfWords)
 
-            let lemmatizedDataset = TrainingDataset(embeddingSize: bagOfWords.sortedArrayOfWords.count, 
+            let lemmatizedDataset = OneHotTrainingDataset(embeddingSize: bagOfWords.sortedArrayOfWords.count, 
                                                     intents: tempLemmatizedIntentsDictionary.map { key, value in 
-                                                       TrainingIntent(intent: key, embeddedUtterances: value.map {
+                                                       OneHotTrainingIntent(intent: key, embeddedUtterances: value.map {
                                                            bagOfWords.embed(arrayOfWords: $0)
                                                        }) 
                                                     })

@@ -1,10 +1,6 @@
 # oneHot-NSLinguisticTagger
 
-Import dataset.json and generate three file on the current folder:
-
-    - encoding.bin: One-Hot Encoding for Stem words
-    - corpus.bin: a Corpus of documents and 
-    - entity.bin: a Class of entities
+Import dataset.json and generate three json files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json
 
 Build: 
     swift build
@@ -13,5 +9,3 @@ Build:
 Usage: 
     ./.build/x86_64-apple-macosx10.10/debug/oneHot-NSLinguisticTagger import ../../SampleDatasets/PharmacyDataset.json 
 
-
-This command produce the following files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json

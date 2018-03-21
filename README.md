@@ -59,7 +59,9 @@ This oneHot-NSLinguisticTagger WordEmbedding project use Apple Foundation NSLing
 This project contains Swift code to be executed on a macOS or iOS environment (NSLinguisticTagger APIs are not based on Linux/cross platorm version of Apple Foundation) to import a JSON file containing the Dataset to be used for training the NLC model. 
 
 Usage example:
+
     oneHot-NSLinguisticTagger import ../../SampleDatasets/PharmacyDataset.json 
+    
 
 This command produce the following files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json
 
@@ -82,7 +84,7 @@ If you are new to fastText please refer to the tutoria at https://fasttext.cc fo
 For simplicity you can find the generated fastText model I'm using in my test in the fastText-Models main subfolder (../../fastText-Models/wikimodel.bin)
 
 
-The fastText-Skipgram project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the Dataset to be used for training the NLC model. It output a ...
+The fastText-Skipgram project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the fastText vectorized Dataset to be used for training the NLC model. 
 
 Build with C++11 extension support:
 
@@ -94,7 +96,7 @@ Usage example:
     fastText-Skipgram import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
 
 
-This command produce the following files on the current folder: ...
+This command produce the following files on the current folder: vectorizedDataset.json and intents.json
 
 
 # ModelNotebook

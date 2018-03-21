@@ -15,22 +15,22 @@ struct Dataset : Codable {
 //JSON OUTPUT FOR MODEL TRAINING
 
 struct OneHotTrainingIntent: Codable {
-    let intent: String
-    let embeddedUtterances: [[Int]]
+    var intent: String
+    var embeddedUtterances: [[Int]]
 } 
 
 struct OneHotTrainingDataset : Codable {
-    let embeddingSize: Int
-    let intents: [OneHotTrainingIntent]
+    var embeddingSize: Int
+    var intents: [OneHotTrainingIntent]
 }
 
 
 struct FastTextTrainingIntent: Codable {
-    let intent: String
-    let sentenceVectors: [[Float]]
+    var intent: String
+    var sentenceVectors: [[Float]]
 } 
 
 struct FastTextTrainingDataset : Codable {
-    let vectorSize: Int
-    let intents: [FastTextTrainingIntent]
+    var vectorSize: Int
+    var intents: [FastTextTrainingIntent]
 }

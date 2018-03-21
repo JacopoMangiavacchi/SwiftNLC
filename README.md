@@ -66,9 +66,9 @@ Usage example:
 This command produce the following files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json
 
 
-## fastText-Skipgram
+## skipGram-FastText
 
-This fastText-Skipgram WordEmbedding project use Facebook open source fastText Library to analyze and tokenize the text using Word2Vec Skipgram word embedding vectors. In particular it use a Swift wrapper to the fastText C++ Library  (https://github.com/JacopoMangiavacchi/SwiftFastText) to generate sentence vectors for each utterances from the input dataset.
+This skipGram-FastText WordEmbedding project use Facebook open source fastText Library to analyze and tokenize the text using Word2Vec skipgram word embedding vectors. In particular it use a Swift wrapper to the fastText C++ Library  (https://github.com/JacopoMangiavacchi/SwiftFastText) to generate sentence vectors for each utterances from the input dataset.
 
 In order to learn word vectors a fast text model must be trained using the following fasttext command line:
 
@@ -84,7 +84,7 @@ If you are new to fastText please refer to the tutoria at https://fasttext.cc fo
 For simplicity you can find the generated fastText model I'm using in my test in the fastText-Models main subfolder (../../fastText-Models/wikimodel.bin)
 
 
-The fastText-Skipgram project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the fastText vectorized Dataset to be used for training the NLC model. 
+The skipGram-FastText project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the fastText vectorized Dataset to be used for training the NLC model. 
 
 Build with C++11 extension support:
 
@@ -93,7 +93,7 @@ Build with C++11 extension support:
 
 Usage example:
     
-    fastText-Skipgram import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
+    skipGram-FastText import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
 
 
 This command produce the following files on the current folder: vectorizedDataset.json and intents.json

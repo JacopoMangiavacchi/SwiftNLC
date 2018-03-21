@@ -17,19 +17,24 @@ class ImportCommand: Command {
             let data = try Data(contentsOf: URL(fileURLWithPath: inputPath.value))
             let dataset =  try JSONDecoder().decode(Dataset.self, from: data)
 
+            var vectorizedDataset = FastTextTrainingDataset(vectorSize: ft.getDimension(), intents: [FastTextTrainingIntent]())
+
             for intent in dataset.intents {
+                var vectorIntent = FastTextTrainingIntent(intent: intent.intent, sentenceVectors: [[Float]]())
                 for utterance in intent.utterances {
-                    let _ = ft.getSentenceVector(sentence: utterance)
+                    let vector = ft.getSentenceVector(sentence: utterance)
+                    vectorIntent.sentenceVectors.append(vector)
                 }
+                vectorizedDataset.intents.append(vectorIntent)
             }
 
 
-            // let vectorizedDatasetData = try JSONEncoder().encode(vectorizedDataset)
-            // try vectorizedDatasetData.write(to: URL(fileURLWithPath: "vectorizedDataset.json"))
+            let vectorizedDatasetData = try JSONEncoder().encode(vectorizedDataset)
+            try vectorizedDatasetData.write(to: URL(fileURLWithPath: "vectorizedDataset.json"))
 
-            // let intentsArray = vectorizedDataset.intents.map { $0.intent }
-            // let intentsData = try JSONEncoder().encode(intentsArray)
-            // try intentsData.write(to: URL(fileURLWithPath: "intents.json"))
+            let intentsArray = vectorizedDataset.intents.map { $0.intent }
+            let intentsData = try JSONEncoder().encode(intentsArray)
+            try intentsData.write(to: URL(fileURLWithPath: "intents.json"))
 
             print("done!")
         }
@@ -39,7 +44,7 @@ class ImportCommand: Command {
     }
 }
 
-let importer = CLI(name: "fastText-Skipgram", version: "1.0.0", description: "SwiftNLC - Dataset JSON importer")
+let importer = CLI(name: "skipGram-FastText", version: "1.0.0", description: "SwiftNLC - Dataset JSON importer")
 importer.commands = [ImportCommand()]
 let _ = importer.go()
 

@@ -3,13 +3,15 @@ Swift Natural Language Classifier with CoreML / TensorFlow
 
 A Natural Language Classifier (NLC) capable to run offline on iOS/watchOS/tvOS devices for understanding Intents from text utterances
 
+For complete documention please follow the tutorial on https://medium.com/@JMangia/coreml-nlc-with-keras-tensorflow-and-apple-nslinguistictagger-cd971cda64c9
+
 
 # Folders / Projects
 
 - Importer: Swift macOS console app to import Intents and Utterances from different formats
 - SampleDatasets: json files containing Intents definitions and sample Utterances
 - WordEmbedding: Swift console app to prepare word embedding vectors for training
-- ModelNotebook: Jupyter Notebook for Keras/TensorFlow Classifier and CoreML export
+- ModelNotebooks: Jupyter Notebook for Keras/TensorFlow Classifier and CoreML export
 - Wrapper: Swift iOS code to simplify access to CoreML Classifier model
 - SwiftNLCTestClient: Test iOS application to play with Wrapper and CoreML model
 
@@ -99,9 +101,13 @@ Usage example:
 This command produce the following files on the current folder: vectorizedDataset.json and intents.json
 
 
-# ModelNotebook
+# ModelNotebooks
 
-Python Jupyter Notebook using Keras API and TensorFlow as backend to create a simple fully connected Deep Network Classifier and CoreMLTools to export the TensorFlow model to CoreML
+This folder contains the Python Jupyter Notebooks to create using Keras API and TensorFlow as backend the Deep Neural Network Classifiers for intent recognitions.  The Keras/TensorFlow models are exported to CoreML using the Apple CoreMLTools python library.
+
+- createModelWithNLTKEmbedding: a sample fully connected deep network classifier using a NLTK based one-hot encoding
+- createModelWithNSLinguisticTaggerEmbedding: a fully connected network classifier using a NSLinguisticTagger one-hot encoding
+- createModelWithFastTextEmbedding: a bidirectional RNN with Attetion classifier using a FastText for word2vec vector encoding
 
 Step by step instruction to create the ML model using Keras/TensorFlow and export it on CoreML using CoreMLConversionTool 
 
@@ -112,7 +118,7 @@ Step by step instruction to create the ML model using Keras/TensorFlow and expor
 ## Create the Keras, TensorFlow, Python, CoreML environment:
     conda env create
 
-This environment is created based on the environment.yml file for iinstalling Python 2.7, TensorFlow 1.1, Keras 2.0.4, CoreMLTools 0.6.3, Pandas and other Python usefull packages:
+This environment is created based on the environment.yml file for iinstalling Python 2.7, TensorFlow 1.6, Keras 2.1.5, CoreMLTools 0.8, Pandas and other Python usefull packages:
 
 
     name: SwiftNLC
@@ -154,15 +160,31 @@ NB NLTK is only needed for the createModelWithNLTKEmbedding initial test Noteboo
     http://localhost:8888
 
 
-To create a basic Model with Keras/TensorFlow and export it with CoreMLTools just open createModelWithNLTKEmbedding.ipynb in your Jupyter browsing session and execute any cells in order to create, save and export the Keras Model using CoreML Exporting Tools
+To create a basic Model with Keras/TensorFlow and export it with CoreMLTools just open createModelWithNSLinguisticTaggerEmbedding.ipynb in your Jupyter browsing session and execute any cells in order to create, save and export the Keras Model using CoreML Exporting Tools
+
+The Basic CoreML Model will be saved in the current folder.
 
 
-The Basic CoreML Model will be saved in the current folder 
+## NSLinguisticTagger one-hot embedding Fully Connected Network Model creation abstract
+
+    from keras.models import Sequential
+    from keras.layers import Dense
+    from keras.optimizers import Adam
+    model = Sequential()
+    model.add(Dense(50, input_dim=len(train_x[0]), activation='relu'))
+    model.add(Dense(8, activation='relu'))
+    model.add(Dense(len(train_y[0]), activation='softmax'))
+    
+
+## FastText word2vec vector embedding RNN with Attention Model creation abstract
+
 
 
 
 
 # Wrapper
+
+
 
 
 # SwiftNLCTestClient

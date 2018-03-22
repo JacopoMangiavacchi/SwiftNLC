@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E36EA132057460200E6BEDC /* bagOfWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E36EA112057460200E6BEDC /* bagOfWords.json */; };
-		7E36EA142057460200E6BEDC /* intents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E36EA122057460200E6BEDC /* intents.json */; };
-		7E36EA172057464100E6BEDC /* SwiftNLC.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E36EA162057464100E6BEDC /* SwiftNLC.mlmodel */; };
-		7E36EA1F20574CCF00E6BEDC /* BagOfWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36EA1C20574CCF00E6BEDC /* BagOfWords.swift */; };
-		7E36EA2020574CCF00E6BEDC /* Lemmatizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36EA1D20574CCF00E6BEDC /* Lemmatizer.swift */; };
-		7E36EA2120574CCF00E6BEDC /* SwiftNLCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36EA1E20574CCF00E6BEDC /* SwiftNLCModel.swift */; };
+		7E014018206382950057BBB6 /* Lemmatizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E014015206382950057BBB6 /* Lemmatizer.swift */; };
+		7E014019206382950057BBB6 /* SwiftNLCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E014016206382950057BBB6 /* SwiftNLCModel.swift */; };
+		7E01401A206382950057BBB6 /* BagOfWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E014017206382950057BBB6 /* BagOfWords.swift */; };
+		7E01401D206382C20057BBB6 /* intents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E01401B206382C20057BBB6 /* intents.json */; };
+		7E01401E206382C20057BBB6 /* bagOfWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E01401C206382C20057BBB6 /* bagOfWords.json */; };
+		7E014020206382F00057BBB6 /* SwiftNLC.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E01401F206382F00057BBB6 /* SwiftNLC.mlmodel */; };
 		7E5D664E20565D7600448764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664D20565D7600448764 /* AppDelegate.swift */; };
 		7E5D665020565D7600448764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664F20565D7600448764 /* ViewController.swift */; };
 		7E5D665320565D7600448764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665120565D7600448764 /* Main.storyboard */; };
@@ -32,12 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E36EA112057460200E6BEDC /* bagOfWords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bagOfWords.json; path = ../../ModelNotebook/bagOfWords.json; sourceTree = "<group>"; };
-		7E36EA122057460200E6BEDC /* intents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = intents.json; path = ../../ModelNotebook/intents.json; sourceTree = "<group>"; };
-		7E36EA162057464100E6BEDC /* SwiftNLC.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SwiftNLC.mlmodel; path = ../../ModelNotebook/SwiftNLC.mlmodel; sourceTree = "<group>"; };
-		7E36EA1C20574CCF00E6BEDC /* BagOfWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BagOfWords.swift; path = ../../../Wrapper/BagOfWords.swift; sourceTree = "<group>"; };
-		7E36EA1D20574CCF00E6BEDC /* Lemmatizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lemmatizer.swift; path = ../../../Wrapper/Lemmatizer.swift; sourceTree = "<group>"; };
-		7E36EA1E20574CCF00E6BEDC /* SwiftNLCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNLCModel.swift; path = ../../../Wrapper/SwiftNLCModel.swift; sourceTree = "<group>"; };
+		7E014015206382950057BBB6 /* Lemmatizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lemmatizer.swift; path = "../../../../Wrapper/oneHot-NSLinguisticTagger/Lemmatizer.swift"; sourceTree = "<group>"; };
+		7E014016206382950057BBB6 /* SwiftNLCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNLCModel.swift; path = "../../../../Wrapper/oneHot-NSLinguisticTagger/SwiftNLCModel.swift"; sourceTree = "<group>"; };
+		7E014017206382950057BBB6 /* BagOfWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BagOfWords.swift; path = "../../../../Wrapper/oneHot-NSLinguisticTagger/BagOfWords.swift"; sourceTree = "<group>"; };
+		7E01401B206382C20057BBB6 /* intents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = intents.json; path = "../../../WordEmbedding/oneHot-NSLinguisticTagger/intents.json"; sourceTree = "<group>"; };
+		7E01401C206382C20057BBB6 /* bagOfWords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bagOfWords.json; path = "../../../WordEmbedding/oneHot-NSLinguisticTagger/bagOfWords.json"; sourceTree = "<group>"; };
+		7E01401F206382F00057BBB6 /* SwiftNLC.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SwiftNLC.mlmodel; path = ../../../ModelNotebooks/SwiftNLC.mlmodel; sourceTree = "<group>"; };
 		7E5D664A20565D7500448764 /* SwiftNLCTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNLCTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D664D20565D7600448764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D664F20565D7600448764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 		7E36EA10205745CF00E6BEDC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				7E36EA112057460200E6BEDC /* bagOfWords.json */,
-				7E36EA122057460200E6BEDC /* intents.json */,
+				7E01401C206382C20057BBB6 /* bagOfWords.json */,
+				7E01401B206382C20057BBB6 /* intents.json */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -80,9 +80,9 @@
 		7E36EA152057462E00E6BEDC /* Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				7E36EA1C20574CCF00E6BEDC /* BagOfWords.swift */,
-				7E36EA1D20574CCF00E6BEDC /* Lemmatizer.swift */,
-				7E36EA1E20574CCF00E6BEDC /* SwiftNLCModel.swift */,
+				7E014017206382950057BBB6 /* BagOfWords.swift */,
+				7E014015206382950057BBB6 /* Lemmatizer.swift */,
+				7E014016206382950057BBB6 /* SwiftNLCModel.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 		7E5D664C20565D7500448764 /* SwiftNLCTestClient */ = {
 			isa = PBXGroup;
 			children = (
-				7E36EA162057464100E6BEDC /* SwiftNLC.mlmodel */,
+				7E01401F206382F00057BBB6 /* SwiftNLC.mlmodel */,
 				7E36EA152057462E00E6BEDC /* Wrapper */,
 				7E36EA10205745CF00E6BEDC /* JSON */,
 				7E5D664D20565D7600448764 /* AppDelegate.swift */,
@@ -211,9 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E36EA142057460200E6BEDC /* intents.json in Resources */,
 				7E5D665820565D7600448764 /* LaunchScreen.storyboard in Resources */,
-				7E36EA132057460200E6BEDC /* bagOfWords.json in Resources */,
+				7E01401D206382C20057BBB6 /* intents.json in Resources */,
+				7E01401E206382C20057BBB6 /* bagOfWords.json in Resources */,
 				7E5D665520565D7600448764 /* Assets.xcassets in Resources */,
 				7E5D665320565D7600448764 /* Main.storyboard in Resources */,
 			);
@@ -233,11 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E36EA2020574CCF00E6BEDC /* Lemmatizer.swift in Sources */,
-				7E36EA2120574CCF00E6BEDC /* SwiftNLCModel.swift in Sources */,
 				7E5D665020565D7600448764 /* ViewController.swift in Sources */,
-				7E36EA1F20574CCF00E6BEDC /* BagOfWords.swift in Sources */,
-				7E36EA172057464100E6BEDC /* SwiftNLC.mlmodel in Sources */,
+				7E014019206382950057BBB6 /* SwiftNLCModel.swift in Sources */,
+				7E014018206382950057BBB6 /* Lemmatizer.swift in Sources */,
+				7E01401A206382950057BBB6 /* BagOfWords.swift in Sources */,
+				7E014020206382F00057BBB6 /* SwiftNLC.mlmodel in Sources */,
 				7E5D664E20565D7600448764 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

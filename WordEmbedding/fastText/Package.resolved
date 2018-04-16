@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftCLI",
+        "repositoryURL": "https://github.com/jakeheis/SwiftCLI",
+        "state": {
+          "branch": null,
+          "revision": "ce663ba76a1b431ee80b95d7bd04d74e428ece56",
+          "version": "4.0.4"
+        }
+      },
+      {
+        "package": "SwiftFastText",
+        "repositoryURL": "https://github.com/JacopoMangiavacchi/SwiftFastText.git",
+        "state": {
+          "branch": null,
+          "revision": "0b3c2acb17ec23e9768761e6a4660e9395b521fc",
+          "version": "0.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

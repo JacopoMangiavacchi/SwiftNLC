@@ -68,9 +68,9 @@ Usage example:
 This command produce the following files on the current folder: bagOfWords.json, lemmatizedDataset.json and intents.json
 
 
-## skipGram-FastText
+## fastText
 
-This skipGram-FastText WordEmbedding project use Facebook open source fastText Library to analyze and tokenize the text using Word2Vec skipgram word embedding vectors. In particular it use a Swift wrapper to the fastText C++ Library  (https://github.com/JacopoMangiavacchi/SwiftFastText) to generate sentence vectors for each utterances from the input dataset.
+This fastText WordEmbedding project use Facebook open source fastText Library to analyze and tokenize the text using Word2Vec skipgram word embedding vectors. In particular it use a Swift wrapper to the fastText C++ Library  (https://github.com/JacopoMangiavacchi/SwiftFastText) to generate sentence vectors for each utterances from the input dataset.
 
 In order to learn word vectors a fast text model must be trained using the following fasttext command line:
 
@@ -86,7 +86,7 @@ If you are new to fastText please refer to the tutoria at https://fasttext.cc fo
 For simplicity you can find the generated fastText model I'm using in my test in the fastText-Models main subfolder (../../fastText-Models/wikimodel.bin)
 
 
-The skipGram-FastText project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the fastText vectorized Dataset to be used for training the NLC model. 
+The fastText project contains Swift code to be executed on Linux or macOS environments to import a JSON file containing the fastText vectorized Dataset to be used for training the NLC model. 
 
 Build with C++11 extension support:
 
@@ -95,10 +95,19 @@ Build with C++11 extension support:
 
 Usage example:
     
-    skipGram-FastText import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
+    fastText import ../../SampleDatasets/PharmacyDataset.json ../../fastText-Models/wikimodel.bin
 
 
 This command produce the following files on the current folder: vectorizedDataset.json and intents.json
+
+
+## GloVe
+
+This GloVe WordEmbedding project use Stanford open source GloVe Library to analyze and tokenize the text using Word2Vec skipgram word embedding vectors. 
+
+WORK IN PROGRESS
+
+
 
 
 # ModelNotebooks
@@ -170,15 +179,32 @@ The Basic CoreML Model will be saved in the current folder.
     from keras.models import Sequential
     from keras.layers import Dense
     from keras.optimizers import Adam
+
     model = Sequential()
     model.add(Dense(50, input_dim=len(train_x[0]), activation='relu'))
     model.add(Dense(8, activation='relu'))
     model.add(Dense(len(train_y[0]), activation='softmax'))
     
 
-## FastText word2vec vector embedding RNN with Attention Model creation abstract
+## fastText word2vec vector embedding RNN Model creation abstract
+
+    from keras.models import Sequential, Model
+    from keras.layers import Dense, Input, Bidirectional, LSTM, GRU, TimeDistributed, Activation, Flatten, Embedding
+    from keras.optimizers import Adam
+
+    model = Sequential([
+                    GRU(len(train_x[0]), batch_size=1, input_shape=(None, len(train_x[0])), return_sequences=True),
+                    TimeDistributed(Dense(64)),
+                    Activation('relu'),
+                    TimeDistributed(Dense(32)),
+                    Activation('relu'),
+                    TimeDistributed(Dense(len(train_y[0]))),
+                    Activation('softmax'),
+                   ])
 
 
+
+## GloVe word2vec vector embedding CNN Model creation abstract
 
 
 

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E327A9820855A3A001D4478 /* intents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E327A9720855A3A001D4478 /* intents.json */; };
 		7E5D664E20565D7600448764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664D20565D7600448764 /* AppDelegate.swift */; };
 		7E5D665020565D7600448764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664F20565D7600448764 /* ViewController.swift */; };
 		7E5D665320565D7600448764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665120565D7600448764 /* Main.storyboard */; };
 		7E5D665520565D7600448764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665420565D7600448764 /* Assets.xcassets */; };
 		7E5D665820565D7600448764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665620565D7600448764 /* LaunchScreen.storyboard */; };
 		7E5D666320565D7700448764 /* SwiftNLCTestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D666220565D7700448764 /* SwiftNLCTestClientTests.swift */; };
-		7E9E0C0220638605009582D3 /* intents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E0C0120638605009582D3 /* intents.json */; };
 		7E9E0C0420638621009582D3 /* SwiftNLCFastText.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C0320638621009582D3 /* SwiftNLCFastText.mlmodel */; };
 		7E9E0C062063865B009582D3 /* SwiftNLCFastTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C052063865B009582D3 /* SwiftNLCFastTextModel.swift */; };
 		7E9E0C0E20638895009582D3 /* SwiftFastText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C0D20638895009582D3 /* SwiftFastText.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E327A9720855A3A001D4478 /* intents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = intents.json; path = ../../../ModelNotebooks/intents.json; sourceTree = "<group>"; };
 		7E5D664A20565D7500448764 /* SwiftNLCTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNLCTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D664D20565D7600448764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D664F20565D7600448764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,9 +52,8 @@
 		7E5D665E20565D7700448764 /* SwiftNLCTestClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNLCTestClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D666220565D7700448764 /* SwiftNLCTestClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNLCTestClientTests.swift; sourceTree = "<group>"; };
 		7E5D666420565D7700448764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E9E0C0120638605009582D3 /* intents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = intents.json; path = "../../../WordEmbedding/skipGram-FastText/intents.json"; sourceTree = "<group>"; };
 		7E9E0C0320638621009582D3 /* SwiftNLCFastText.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SwiftNLCFastText.mlmodel; path = ../../../ModelNotebooks/SwiftNLCFastText.mlmodel; sourceTree = "<group>"; };
-		7E9E0C052063865B009582D3 /* SwiftNLCFastTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNLCFastTextModel.swift; path = "../../../../Wrapper/skipGram-FastText/SwiftNLCFastTextModel.swift"; sourceTree = "<group>"; };
+		7E9E0C052063865B009582D3 /* SwiftNLCFastTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNLCFastTextModel.swift; path = "../../../../Wrapper/fastText/SwiftNLCFastTextModel.swift"; sourceTree = "<group>"; };
 		7E9E0C0D20638895009582D3 /* SwiftFastText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftFastText.swift; path = SwiftNLCTestClient/SwiftFastText/SwiftFastText/SwiftFastText.swift; sourceTree = SOURCE_ROOT; };
 		7E9E0C11206388C0009582D3 /* CFastTextWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFastTextWrapper.cpp; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/CFastTextWrapper.cpp; sourceTree = SOURCE_ROOT; };
 		7E9E0C1320638914009582D3 /* SwiftNLCTestClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SwiftNLCTestClient-Bridging-Header.h"; path = "SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/SwiftNLCTestClient-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -101,7 +101,7 @@
 		7E36EA10205745CF00E6BEDC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				7E9E0C0120638605009582D3 /* intents.json */,
+				7E327A9720855A3A001D4478 /* intents.json */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E9E0C0220638605009582D3 /* intents.json in Resources */,
+				7E327A9820855A3A001D4478 /* intents.json in Resources */,
 				7E5D665820565D7600448764 /* LaunchScreen.storyboard in Resources */,
 				7E9E0C3420638B24009582D3 /* wikimodel.bin in Resources */,
 				7E5D665520565D7600448764 /* Assets.xcassets in Resources */,

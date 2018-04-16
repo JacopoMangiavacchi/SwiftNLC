@@ -74,7 +74,7 @@ This fastText WordEmbedding project use Facebook open source fastText Library to
 
 In order to learn word vectors a fast text model must be trained using the following fasttext command line:
 
-    $ fasttext skipgram -input data.txt -output model
+    $ fastText skipgram -input data.txt -output model
 
 I used the Wikipedia pre-trained word vectors that can be downloaded below:
     
@@ -153,7 +153,6 @@ This environment is created based on the environment.yml file for iinstalling Py
         - nltk==3.2.5
 
 
-NB NLTK is only needed for the createModelWithNLTKEmbedding initial test Notebook
 
 
 ## Activate the environment (Mac/Linux):

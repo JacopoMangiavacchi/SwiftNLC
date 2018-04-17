@@ -67,3 +67,4 @@ fastlane/screenshots
 fastlane/test_output
 
 fastText-Models
+ModelNotebooks/glove

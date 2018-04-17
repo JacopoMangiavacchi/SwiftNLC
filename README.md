@@ -105,7 +105,7 @@ This command produce the following files on the current folder: vectorizedDatase
 
 This GloVe WordEmbedding project use Stanford open source GloVe Library to analyze and tokenize the text using Word2Vec skipgram word embedding vectors. 
 
-WORK IN PROGRESS
+WORK IN PROGRESS (directly in the iPython notebook)
 
 
 

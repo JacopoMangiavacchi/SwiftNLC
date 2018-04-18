@@ -68,3 +68,6 @@ fastlane/test_output
 
 fastText-Models
 ModelNotebooks/glove
+
+ModelNotebooks/*.h5
+ModelNotebooks/*.mlmodel

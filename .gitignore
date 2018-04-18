@@ -71,3 +71,4 @@ ModelNotebooks/glove
 
 ModelNotebooks/*.h5
 ModelNotebooks/*.mlmodel
+Words.json

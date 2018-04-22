@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var intentLabel: UILabel!
     @IBOutlet weak var commandField: UITextField!
     
-    let model = SwiftNLCFastTextModel()
+    //let model = SwiftNLCFastTextModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func go(_ sender: Any) {
         print(commandField.text!)
         
-        if let prediction = model.predict(commandField.text!) {
-            intentLabel.text = "\(prediction.0) (\(String(format: "%2.1f", prediction.1 * 100))%)"
-        }
-        else {
-            intentLabel.text = "error"
-        }
+//        if let prediction = model.predict(commandField.text!) {
+//            intentLabel.text = "\(prediction.0) (\(String(format: "%2.1f", prediction.1 * 100))%)"
+//        }
+//        else {
+//            intentLabel.text = "error"
+//        }
 
         commandField.resignFirstResponder()
     }

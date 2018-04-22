@@ -7,27 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E5D19D9208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D19D7208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel */; };
+		7E5D19DA208CF75D006163AA /* Words.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D19D8208CF75D006163AA /* Words.json */; };
 		7E5D664E20565D7600448764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664D20565D7600448764 /* AppDelegate.swift */; };
 		7E5D665020565D7600448764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664F20565D7600448764 /* ViewController.swift */; };
 		7E5D665320565D7600448764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665120565D7600448764 /* Main.storyboard */; };
 		7E5D665520565D7600448764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665420565D7600448764 /* Assets.xcassets */; };
 		7E5D665820565D7600448764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D665620565D7600448764 /* LaunchScreen.storyboard */; };
 		7E5D666320565D7700448764 /* SwiftNLCTestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D666220565D7700448764 /* SwiftNLCTestClientTests.swift */; };
-		7E9E0C0220638605009582D3 /* intents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E0C0120638605009582D3 /* intents.json */; };
-		7E9E0C0420638621009582D3 /* SwiftNLCFastText.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C0320638621009582D3 /* SwiftNLCFastText.mlmodel */; };
-		7E9E0C062063865B009582D3 /* SwiftNLCFastTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C052063865B009582D3 /* SwiftNLCFastTextModel.swift */; };
-		7E9E0C0E20638895009582D3 /* SwiftFastText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C0D20638895009582D3 /* SwiftFastText.swift */; };
-		7E9E0C12206388C0009582D3 /* CFastTextWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C11206388C0009582D3 /* CFastTextWrapper.cpp */; };
-		7E9E0C2A20638977009582D3 /* model.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C1720638976009582D3 /* model.cc */; };
-		7E9E0C2B20638977009582D3 /* matrix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C1820638976009582D3 /* matrix.cc */; };
-		7E9E0C2C20638977009582D3 /* vector.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C1920638976009582D3 /* vector.cc */; };
-		7E9E0C2D20638977009582D3 /* args.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C1A20638976009582D3 /* args.cc */; };
-		7E9E0C2E20638977009582D3 /* fasttext.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C1B20638976009582D3 /* fasttext.cc */; };
-		7E9E0C2F20638977009582D3 /* dictionary.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C2120638976009582D3 /* dictionary.cc */; };
-		7E9E0C3020638977009582D3 /* qmatrix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C2520638977009582D3 /* qmatrix.cc */; };
-		7E9E0C3120638977009582D3 /* utils.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C2820638977009582D3 /* utils.cc */; };
-		7E9E0C3220638977009582D3 /* productquantizer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E0C2920638977009582D3 /* productquantizer.cc */; };
-		7E9E0C3420638B24009582D3 /* wikimodel.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E0C3320638B24009582D3 /* wikimodel.bin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E5D19D7208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SwiftNLCGloveRNN.mlmodel; path = ../../../ModelNotebooks/SwiftNLCGloveRNN.mlmodel; sourceTree = "<group>"; };
+		7E5D19D8208CF75D006163AA /* Words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Words.json; path = ../../../ModelNotebooks/Words.json; sourceTree = "<group>"; };
 		7E5D664A20565D7500448764 /* SwiftNLCTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNLCTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D664D20565D7600448764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D664F20565D7600448764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,33 +40,6 @@
 		7E5D665E20565D7700448764 /* SwiftNLCTestClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNLCTestClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D666220565D7700448764 /* SwiftNLCTestClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNLCTestClientTests.swift; sourceTree = "<group>"; };
 		7E5D666420565D7700448764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E9E0C0120638605009582D3 /* intents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = intents.json; path = "../../../WordEmbedding/skipGram-FastText/intents.json"; sourceTree = "<group>"; };
-		7E9E0C0320638621009582D3 /* SwiftNLCFastText.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SwiftNLCFastText.mlmodel; path = ../../../ModelNotebooks/SwiftNLCFastText.mlmodel; sourceTree = "<group>"; };
-		7E9E0C052063865B009582D3 /* SwiftNLCFastTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNLCFastTextModel.swift; path = "../../../../Wrapper/skipGram-FastText/SwiftNLCFastTextModel.swift"; sourceTree = "<group>"; };
-		7E9E0C0D20638895009582D3 /* SwiftFastText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftFastText.swift; path = SwiftNLCTestClient/SwiftFastText/SwiftFastText/SwiftFastText.swift; sourceTree = SOURCE_ROOT; };
-		7E9E0C11206388C0009582D3 /* CFastTextWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFastTextWrapper.cpp; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/CFastTextWrapper.cpp; sourceTree = SOURCE_ROOT; };
-		7E9E0C1320638914009582D3 /* SwiftNLCTestClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SwiftNLCTestClient-Bridging-Header.h"; path = "SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/SwiftNLCTestClient-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		7E9E0C1520638953009582D3 /* CFastTextWrapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CFastTextWrapper.hpp; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/include/CFastTextWrapper.hpp; sourceTree = SOURCE_ROOT; };
-		7E9E0C1720638976009582D3 /* model.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = model.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/model.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C1820638976009582D3 /* matrix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = matrix.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/matrix.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C1920638976009582D3 /* vector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vector.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/vector.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C1A20638976009582D3 /* args.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = args.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/args.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C1B20638976009582D3 /* fasttext.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fasttext.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/fasttext.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C1C20638976009582D3 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/utils.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C1D20638976009582D3 /* real.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = real.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/real.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C1E20638976009582D3 /* qmatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qmatrix.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/qmatrix.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C1F20638976009582D3 /* productquantizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = productquantizer.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/productquantizer.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2020638976009582D3 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/matrix.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2120638976009582D3 /* dictionary.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dictionary.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/dictionary.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C2220638976009582D3 /* args.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = args.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/args.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2320638976009582D3 /* fasttext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fasttext.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/fasttext.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2420638976009582D3 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = model.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/model.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2520638977009582D3 /* qmatrix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qmatrix.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/qmatrix.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C2620638977009582D3 /* dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dictionary.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/dictionary.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2720638977009582D3 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vector.h; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/vector.h; sourceTree = SOURCE_ROOT; };
-		7E9E0C2820638977009582D3 /* utils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utils.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/utils.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C2920638977009582D3 /* productquantizer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = productquantizer.cc; path = SwiftNLCTestClient/SwiftFastText/CFastTextWrapper/FastText/productquantizer.cc; sourceTree = SOURCE_ROOT; };
-		7E9E0C3320638B24009582D3 /* wikimodel.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = wikimodel.bin; path = "../../../fastText-Models/wikimodel.bin"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,22 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E36EA10205745CF00E6BEDC /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C0120638605009582D3 /* intents.json */,
-			);
-			name = JSON;
-			sourceTree = "<group>";
-		};
-		7E36EA152057462E00E6BEDC /* Wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C052063865B009582D3 /* SwiftNLCFastTextModel.swift */,
-			);
-			path = Wrapper;
-			sourceTree = "<group>";
-		};
 		7E5D664120565D7500448764 = {
 			isa = PBXGroup;
 			children = (
@@ -135,11 +81,8 @@
 		7E5D664C20565D7500448764 /* SwiftNLCTestClient */ = {
 			isa = PBXGroup;
 			children = (
-				7E9E0C0320638621009582D3 /* SwiftNLCFastText.mlmodel */,
-				7E9E0C3320638B24009582D3 /* wikimodel.bin */,
-				7E9E0C07206387C2009582D3 /* SwiftFastText */,
-				7E36EA152057462E00E6BEDC /* Wrapper */,
-				7E36EA10205745CF00E6BEDC /* JSON */,
+				7E5D19D7208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel */,
+				7E5D19D8208CF75D006163AA /* Words.json */,
 				7E5D664D20565D7600448764 /* AppDelegate.swift */,
 				7E5D664F20565D7600448764 /* ViewController.swift */,
 				7E5D665120565D7600448764 /* Main.storyboard */,
@@ -157,70 +100,6 @@
 				7E5D666420565D7700448764 /* Info.plist */,
 			);
 			path = SwiftNLCTestClientTests;
-			sourceTree = "<group>";
-		};
-		7E9E0C07206387C2009582D3 /* SwiftFastText */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C0F206388A8009582D3 /* CFastTextWrapper */,
-				7E9E0C0C20638871009582D3 /* SwiftFastText */,
-			);
-			path = SwiftFastText;
-			sourceTree = "<group>";
-		};
-		7E9E0C0C20638871009582D3 /* SwiftFastText */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C0D20638895009582D3 /* SwiftFastText.swift */,
-			);
-			name = SwiftFastText;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		7E9E0C0F206388A8009582D3 /* CFastTextWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C162063895F009582D3 /* FastText */,
-				7E9E0C1420638938009582D3 /* include */,
-				7E9E0C11206388C0009582D3 /* CFastTextWrapper.cpp */,
-				7E9E0C1320638914009582D3 /* SwiftNLCTestClient-Bridging-Header.h */,
-			);
-			name = CFastTextWrapper;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		7E9E0C1420638938009582D3 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C1520638953009582D3 /* CFastTextWrapper.hpp */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		7E9E0C162063895F009582D3 /* FastText */ = {
-			isa = PBXGroup;
-			children = (
-				7E9E0C1A20638976009582D3 /* args.cc */,
-				7E9E0C2220638976009582D3 /* args.h */,
-				7E9E0C2120638976009582D3 /* dictionary.cc */,
-				7E9E0C2620638977009582D3 /* dictionary.h */,
-				7E9E0C1B20638976009582D3 /* fasttext.cc */,
-				7E9E0C2320638976009582D3 /* fasttext.h */,
-				7E9E0C1820638976009582D3 /* matrix.cc */,
-				7E9E0C2020638976009582D3 /* matrix.h */,
-				7E9E0C1720638976009582D3 /* model.cc */,
-				7E9E0C2420638976009582D3 /* model.h */,
-				7E9E0C2920638977009582D3 /* productquantizer.cc */,
-				7E9E0C1F20638976009582D3 /* productquantizer.h */,
-				7E9E0C2520638977009582D3 /* qmatrix.cc */,
-				7E9E0C1E20638976009582D3 /* qmatrix.h */,
-				7E9E0C1D20638976009582D3 /* real.h */,
-				7E9E0C2820638977009582D3 /* utils.cc */,
-				7E9E0C1C20638976009582D3 /* utils.h */,
-				7E9E0C1920638976009582D3 /* vector.cc */,
-				7E9E0C2720638977009582D3 /* vector.h */,
-			);
-			path = FastText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,9 +184,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E9E0C0220638605009582D3 /* intents.json in Resources */,
 				7E5D665820565D7600448764 /* LaunchScreen.storyboard in Resources */,
-				7E9E0C3420638B24009582D3 /* wikimodel.bin in Resources */,
+				7E5D19DA208CF75D006163AA /* Words.json in Resources */,
 				7E5D665520565D7600448764 /* Assets.xcassets in Resources */,
 				7E5D665320565D7600448764 /* Main.storyboard in Resources */,
 			);
@@ -327,21 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E9E0C2D20638977009582D3 /* args.cc in Sources */,
-				7E9E0C0420638621009582D3 /* SwiftNLCFastText.mlmodel in Sources */,
-				7E9E0C3020638977009582D3 /* qmatrix.cc in Sources */,
-				7E9E0C062063865B009582D3 /* SwiftNLCFastTextModel.swift in Sources */,
-				7E9E0C2E20638977009582D3 /* fasttext.cc in Sources */,
-				7E9E0C2B20638977009582D3 /* matrix.cc in Sources */,
 				7E5D665020565D7600448764 /* ViewController.swift in Sources */,
-				7E9E0C2C20638977009582D3 /* vector.cc in Sources */,
-				7E9E0C2F20638977009582D3 /* dictionary.cc in Sources */,
 				7E5D664E20565D7600448764 /* AppDelegate.swift in Sources */,
-				7E9E0C12206388C0009582D3 /* CFastTextWrapper.cpp in Sources */,
-				7E9E0C2A20638977009582D3 /* model.cc in Sources */,
-				7E9E0C3220638977009582D3 /* productquantizer.cc in Sources */,
-				7E9E0C0E20638895009582D3 /* SwiftFastText.swift in Sources */,
-				7E9E0C3120638977009582D3 /* utils.cc in Sources */,
+				7E5D19D9208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,16 +13,12 @@ class Lemmatizer {
         var tokens: [TaggedToken] = []
         
         tagger.enumerateTags(in: NSMakeRange(0, text.count), scheme:NSLinguisticTagScheme(rawValue: scheme), options: options) { tag, tokenRange, _, _ in
+            
             let token = (text as NSString).substring(with: tokenRange)
             tokens.append((token, tag?.rawValue))
         }
         
-        
         return tokens
-    }
-
-    func partOfSpeech(text: String) -> [TaggedToken] {
-        return tag(text: text, scheme: NSLinguisticTagScheme.lexicalClass.rawValue)
     }
 
     func lemmatize(text: String) -> [TaggedToken] {

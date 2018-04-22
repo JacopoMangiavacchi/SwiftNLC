@@ -3,7 +3,7 @@ import CoreML
 
 class SwiftNLCGloVeModel {
 
-    lazy var words: [String: Int] = {
+    lazy var wordDictionary: [String: Int] = {
         return try! JSONDecoder().decode(Dictionary<String, Int>.self, from: Data(contentsOf: Bundle.main.url(forResource:"Words", withExtension: "json")!))
     }()
     
@@ -13,10 +13,15 @@ class SwiftNLCGloVeModel {
     var lemmatizer = Lemmatizer()
     
     func predict(_ utterance: String) -> (String, Float)? {
-        let lemmas = lemmatizer.lemmatize(text: utterance).compactMap { $0.1 }
+        let words = lemmatizer.lemmatize(text: utterance).compactMap { $0.0 } //$0.1 for lemma -- $0.0 Do not take lemma but original word !!!
 
-        print(lemmas)
-
+        var embedding = [Int]()
+        for word in words {
+            embedding.append(wordDictionary[word] ?? 0)
+        }
+        
+        print(embedding)
+        
         //let embedding = bagOfWords.embed(arrayOfWords: lemmas)
 
         let model = SwiftNLCGloveRNN()

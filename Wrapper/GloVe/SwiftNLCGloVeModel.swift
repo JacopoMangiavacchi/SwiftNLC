@@ -7,7 +7,10 @@ class SwiftNLCGloVeModel {
         return try! JSONDecoder().decode(Dictionary<String, Int>.self, from: Data(contentsOf: Bundle.main.url(forResource:"Words", withExtension: "json")!))
     }()
     
-    
+    lazy var intents: [String] = {
+        return try! JSONDecoder().decode(Array<String>.self, from: Data(contentsOf: Bundle.main.url(forResource:"intents", withExtension: "json")!))
+    }()
+
 
     
     var lemmatizer = Lemmatizer()
@@ -59,6 +62,6 @@ class SwiftNLCGloVeModel {
             }
         }
 
-        return ("\(pos)", max)
+        return (intents[pos], max)
     }
 }

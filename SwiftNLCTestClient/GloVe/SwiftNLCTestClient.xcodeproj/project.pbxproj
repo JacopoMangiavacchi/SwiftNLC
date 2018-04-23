@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E235994208CFD6E005BBEA7 /* Lemmatizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E235992208CFD6E005BBEA7 /* Lemmatizer.swift */; };
 		7E235996208CFDCC005BBEA7 /* SwiftNLCGloVeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E235995208CFDCC005BBEA7 /* SwiftNLCGloVeModel.swift */; };
+		7E235998208DFE92005BBEA7 /* intents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E235997208DFE92005BBEA7 /* intents.json */; };
 		7E5D19D9208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D19D7208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel */; };
 		7E5D19DA208CF75D006163AA /* Words.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D19D8208CF75D006163AA /* Words.json */; };
 		7E5D664E20565D7600448764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D664D20565D7600448764 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		7E235992208CFD6E005BBEA7 /* Lemmatizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lemmatizer.swift; path = ../../../../Wrapper/GloVe/Lemmatizer.swift; sourceTree = "<group>"; };
 		7E235995208CFDCC005BBEA7 /* SwiftNLCGloVeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNLCGloVeModel.swift; path = ../../../../Wrapper/GloVe/SwiftNLCGloVeModel.swift; sourceTree = "<group>"; };
+		7E235997208DFE92005BBEA7 /* intents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = intents.json; path = ../../../ModelNotebooks/intents.json; sourceTree = "<group>"; };
 		7E5D19D7208CF75D006163AA /* SwiftNLCGloveRNN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SwiftNLCGloveRNN.mlmodel; path = ../../../ModelNotebooks/SwiftNLCGloveRNN.mlmodel; sourceTree = "<group>"; };
 		7E5D19D8208CF75D006163AA /* Words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Words.json; sourceTree = "<group>"; };
 		7E5D664A20565D7500448764 /* SwiftNLCTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNLCTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				7E5D19D8208CF75D006163AA /* Words.json */,
+				7E235997208DFE92005BBEA7 /* intents.json */,
 			);
 			name = "JSON(Do Not Open)";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				7E5D665820565D7600448764 /* LaunchScreen.storyboard in Resources */,
 				7E5D19DA208CF75D006163AA /* Words.json in Resources */,
 				7E5D665520565D7600448764 /* Assets.xcassets in Resources */,
+				7E235998208DFE92005BBEA7 /* intents.json in Resources */,
 				7E5D665320565D7600448764 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

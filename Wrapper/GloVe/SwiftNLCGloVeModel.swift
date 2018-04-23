@@ -7,8 +7,8 @@ class SwiftNLCGloVeModel {
         return try! JSONDecoder().decode(Dictionary<String, Int>.self, from: Data(contentsOf: Bundle.main.url(forResource:"Words", withExtension: "json")!))
     }()
     
-    lazy var intents: [String] = {
-        return try! JSONDecoder().decode(Array<String>.self, from: Data(contentsOf: Bundle.main.url(forResource:"intents", withExtension: "json")!))
+    lazy var classes: [String] = {
+        return try! JSONDecoder().decode(Array<String>.self, from: Data(contentsOf: Bundle.main.url(forResource:"Classes", withExtension: "json")!))
     }()
 
 
@@ -62,6 +62,6 @@ class SwiftNLCGloVeModel {
             }
         }
 
-        return (intents[pos], max)
+        return (classes[pos], max)
     }
 }

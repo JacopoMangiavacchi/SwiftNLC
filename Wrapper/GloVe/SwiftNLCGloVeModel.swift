@@ -57,7 +57,7 @@ class SwiftNLCGloVeModel {
             
         var max:Double = 0.0
         var pos = -1
-        for i in 0..<8 {
+        for i in 0..<classes.count {
             let value = prediction.entities[i].doubleValue
             if value > max {
                 max = value

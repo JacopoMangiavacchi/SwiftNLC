@@ -156,7 +156,7 @@ This environment is created based on the environment.yml file for iinstalling Py
 
 
 ## Activate the environment (Mac/Linux):
-    source activate SwiftNLC
+    conda activate SwiftNLC
 
 ## Check that your prompt changed to:
     (SwiftNLC) $
